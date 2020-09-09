@@ -15,21 +15,31 @@
     <body>
         <div class="container">
             <div class="hero-unit">
-                <h1>Simple PHP App</h1>
+                <h1>Octank Demo PHP App</h1>
                 <h2>Congratulations</h2>
-                <p>Your PHP application is now running on a container in Amazon ECS.</p>
-                <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
+                <p>Your PHP application is now running on a container in Amazon ECS.</p
                 <?php
                         $myfile = fopen("/var/www/my-vol/date", "r") or die("");
                         echo fread($myfile,filesize("/var/www/my-vol/date"));
                         fclose($myfile);
                 ?>
+                <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
+                <!-- Some functions to unit test --> 
+                <?php
+                        class MyClass {
+                            public function method1(int $a, int $b): int {
+                                return $a + $b;
+                            }
 
+                            public function method2(string $a, string $b): string {
+                                return $a . $b;
+                            }
+                        }
+                ?>
             </div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
     </body>
-
 </html>
