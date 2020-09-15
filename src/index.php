@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <div class="hero-unit">
-                <h1>Octank Demo PHP Application</h1>
+                <h1>Octank Demo PHP App</h1>
                 <p>The demo application is now running on a container in Amazon ECS Fargate.</p>
                 <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
                 <?php
